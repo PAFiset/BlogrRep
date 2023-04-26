@@ -1,0 +1,35 @@
+$Mobile:375px;
+$Desktop:1440px;
+
+//JobListing
+
+$DesaturatedDarkCyan:hsl(180, 29%, 50%);
+
+$LightWhitishCyan: hsl(180, 52%, 96%); //(Background)
+$LightGrayishCyan: hsl(180, 31%, 95%); //(Filter Tablets)
+$DarkGrayishCyan: hsl(180, 8%, 52%); //
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+//Blogr
+
+$Lightred:hsl(356, 100%, 66%); // (CTA text)
+$VeryLightRed:hsl(355, 100%, 74%); // (CTA hover background)
+$VeryDark:hsl(208, 49%, 24%); //blue (headings)
+
+$White: hsl(0, 0%, 100%); //(text)
+$GrayishBlue : hsl(240, 2%, 79%); //(footer text)
+$VeryDarkGrayishBlue : hsl(207, 13%, 34%); //(body copy)
+$VeryDarkBlackBlue : hsl(240, 10%, 16%); //(footer background)
+
+//Background gradient - Intro/CTA mobile nav:
+
+$VeryLightRed: hsl(13, 100%, 72%);
+$LightRed: hsl(353, 100%, 62%);
+
+//Background gradient - body:
+
+$VeryDarkGrayBlue: hsl(237, 17%, 21%);
+$VeryDarkDesaturatedBlue: hsl(237, 23%, 32%);
+
+
+$StandardFontSize:16px;
