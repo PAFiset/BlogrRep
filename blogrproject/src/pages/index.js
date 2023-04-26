@@ -9,8 +9,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="">
-        allo!!!!
+      <main >
+        <div className="herobanner">
+          <img src="./images/blogr/bg-pattern-intro-desktop.svg" alt="Backgrounds pattern" className="desktop_pattern"/>
+          <img src="./images/blogr/bg-pattern-intro-mobile.svg" alt="Backgrounds pattern" className="mobile_pattern"/>
+
+          <h1>
+            A modern publishing platform
+          </h1>
+          <h2>
+            Grow your audience and build your online brand
+          </h2>
+          <div className="options">
+            <button>Start For Free</button>
+            <button>Learn More</button>
+          </div>
+
+        </div>
       </main>
     </>
   )
