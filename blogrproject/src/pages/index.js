@@ -49,10 +49,26 @@ export default function Home() {
                 full control.
               </p>
             </div>
+            
           </div>
         </div>
         <div className="info2">
-
+          <div className="info2_content_text" >
+            <h2>
+              State of the art infrastructure
+            </h2>
+            <p>
+              With reliability and speed in mind, worldwide data centers provide the
+              backbone for ultra-fast connectivity, This ensures your site will load 
+              instantly, no matter where your readers are, keeping your site competitive.
+            </p>
+          </div>
+          <div className="cellphone_wrapper" >
+            <img src="./images/blogr/illustration-phones.svg" alt="mobile phone front and back" className="cellphone" />
+          </div>
+          <div className="pattern_wrapper" >
+            <img src="./images/blogr/bg-pattern-circles.svg" alt="circles pattern" className="pattern" />
+          </div>
         </div>
       </main>
     </>
