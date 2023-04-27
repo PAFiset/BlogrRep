@@ -115,6 +115,7 @@ main{
     h2{
       font-size: 2.2rem;
       transform: translateY(100px);
+      text-align: center;
 
       @media(max-width:$Desktop){
         transform: none;
@@ -263,6 +264,70 @@ main{
 
       p{
         line-height: 2;
+      }
+    }
+
+  }
+
+  .info3{
+    display: flex;
+    color: $VeryDark;
+    flex-direction: row-reverse;
+    margin-top: 75px;
+
+    @media(max-width:$Desktop){
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info3_content_text{
+      width: 50%;
+      padding: 150px 0 0 100px;
+      height: 70rem;
+
+      @media(max-width:$Desktop){
+        width: 100%;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      @media(max-width:$Mobile){
+        height: 90rem;
+      }
+
+      h3{
+        font-size: 1.75rem;
+        margin: 3rem 0;
+      }
+
+      p{
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+    }
+
+    img{
+      position: absolute;
+      left: -200px;
+
+      &.desktop{
+        @media(max-width:$Desktop){
+          display: none;
+        }
+      }
+
+      &.mobile{
+        display: none;
+        @media(max-width:$Desktop){
+          display: inline;
+        }
+      }
+
+      @media(max-width:$Desktop){
+        position: static;
+        width: 100%;
+        height: auto;
+        max-width: 500px;
       }
     }
 

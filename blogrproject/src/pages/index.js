@@ -70,6 +70,30 @@ export default function Home() {
             <img src="./images/blogr/bg-pattern-circles.svg" alt="circles pattern" className="pattern" />
           </div>
         </div>
+        <div className="info3">
+          <img src="./images/blogr/illustration-laptop-mobile.svg" alt="Laptop Giant Logo" className="mobile" />
+          <div className="info3_content_text" >
+            <h3>
+              Free, open, simple
+            </h3>
+            <p>
+              Blogr is a free and open source application backed by a large 
+              community of helpful developers. It supports features such as code 
+              syntax highlighting, RSS feeds, social media integration, third-party 
+              commenting tools, and works seamlessly with Google Analytic. The 
+              architechture is clean and is realtively easy to learn. 
+            </p>
+            <h3>
+              Powerful tooling
+            </h3>
+            <p>
+              Battery included, We built a simple and straightforward CLI tool that 
+              makes customization and deployment a breeze, but capable of 
+              producing even the most complicated sites.
+            </p>
+          </div>
+          <img src="./images/blogr/illustration-laptop-desktop.svg" alt="Laptop Giant Logo" className="desktop" />
+        </div>
       </main>
     </>
   )
