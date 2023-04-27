@@ -30,6 +30,8 @@ export default function Home() {
             Designed for the future
           </h2>
           <div className="info1_content" >
+            <img src="./images/blogr/illustration-editor-desktop.svg" alt="Illustrator giant logo" className="info1_content_image desktop" />
+            <img src="./images/blogr/illustration-editor-mobile.svg" alt="Illustrator giant logo" className="info1_content_image mobile" />
             <div className="info1_content_text" >
               <h3>Introducing an extensible editor</h3>
               <p>
@@ -47,11 +49,10 @@ export default function Home() {
                 full control.
               </p>
             </div>
-            <img src="./images/blogr/illustration-editor-desktop.svg" alt="Illustrator giant logo" className="info1_content_image" />
           </div>
         </div>
         <div className="info2">
-          
+
         </div>
       </main>
     </>

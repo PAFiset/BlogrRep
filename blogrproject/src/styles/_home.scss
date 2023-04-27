@@ -115,15 +115,31 @@ main{
     h2{
       font-size: 2.2rem;
       transform: translateY(100px);
+
+      @media(max-width:$Desktop){
+        transform: none;
+        margin: 5rem 0;
+      }
     }
 
     .info1_content{
       display: flex;
 
+      @media(max-width:$Desktop){
+        flex-direction: column;
+        align-items: center;
+      }
+
       .info1_content_text{
         width: 50%;
         padding: 150px 0 0 100px;
         height: 100vh;
+
+        @media(max-width:$Desktop){
+          width: 100%;
+          text-align: center;
+          padding: 50px 20px;
+        }
 
         h3{
           font-size: 1.75rem;
@@ -134,13 +150,31 @@ main{
           font-size: 1.3rem;
           line-height: 1.5;
         }
-
-
       }
 
       .info1_content_image{
         position: absolute;
         right: -200px;
+
+        &.desktop{
+          @media(max-width:$Desktop){
+            display: none;
+          }
+        }
+
+        &.mobile{
+          display: none;
+          @media(max-width:$Desktop){
+            display: inline;
+          }
+        }
+
+        @media(max-width:$Desktop){
+          position: static;
+          width: 100%;
+          height: auto;
+          max-width: 500px;
+        }
       }
 
     }
