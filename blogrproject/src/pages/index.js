@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Footer from '@/components/footer';
 
 export default function Home() {
   return (
@@ -95,6 +96,7 @@ export default function Home() {
           <img src="./images/blogr/illustration-laptop-desktop.svg" alt="Laptop Giant Logo" className="desktop" />
         </div>
       </main>
+      <Footer/>
     </>
   )
 }
