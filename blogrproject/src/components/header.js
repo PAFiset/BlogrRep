@@ -3,16 +3,23 @@ import Link from "next/link";
 const Header = () => {
 
   const dropdownhandler = (event) =>{ 
-    let collection = document.getElementsByClassName("dropdown");
+    if(!event.currentTarget.classList.contains("selected")){
+      let collection = document.getElementsByClassName("dropdown");
 
-    for (let i = 0; i < collection.length; i++) {
-      collection[i].childNodes[0].classList.remove("selected");
-      collection[i].childNodes[1].classList.remove("open");
+      for (let i = 0; i < collection.length; i++) {
+        collection[i].childNodes[0].classList.remove("selected");
+        collection[i].childNodes[1].classList.remove("open");
+      }
+
+      let content = event.currentTarget.parentNode.children;
+      content[0].classList.add("selected");
+      content[1].classList.add("open");
+    } 
+    else {
+      let content = event.currentTarget.parentNode.children;
+      content[0].classList.remove("selected");
+      content[1].classList.remove("open");
     }
-
-    let content = event.currentTarget.children;
-    content[0].classList.add("selected");
-    content[1].classList.add("open");
   }
 
   return ( 
@@ -20,8 +27,8 @@ const Header = () => {
       <div className="navbar">
         <div className="navcontent" >
           <img src="./images/blogr/logo.svg" alt="" />
-          <div className="dropdown" onClick={dropdownhandler} >
-            <div className="dropdowntext"  >
+          <div className="dropdown" >
+            <div className="dropdowntext" onClick={dropdownhandler}  >
               <div>
                 Product
               </div>
@@ -35,8 +42,8 @@ const Header = () => {
               <Link href="/" >Integrations</Link>
             </nav>
           </div>
-          <div className="dropdown" onClick={dropdownhandler} >
-            <div className="dropdowntext"  >
+          <div className="dropdown" >
+            <div className="dropdowntext" onClick={dropdownhandler}  >
               <div>
                 Compagny
               </div>
@@ -49,8 +56,8 @@ const Header = () => {
               <Link href="/" >Career</Link>
             </nav>
           </div>
-          <div className="dropdown" onClick={dropdownhandler} >
-            <div className="dropdowntext"  >
+          <div className="dropdown" >
+            <div className="dropdowntext" onClick={dropdownhandler}  >
               <div>
                 Connect
               </div>
