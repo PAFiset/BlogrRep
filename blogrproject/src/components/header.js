@@ -74,6 +74,11 @@ const Header = () => {
           <Link href="/" >Login</Link>
           <Link href="/" className="signupbtn" >Sign up</Link>
         </nav>
+        <button className="modalbtn" >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header> 
   );
