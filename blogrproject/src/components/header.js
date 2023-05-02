@@ -1,12 +1,26 @@
 import Link from "next/link";
 
 const Header = () => {
+
+  const dropdownhandler = (event) =>{ 
+    let collection = document.getElementsByClassName("dropdown");
+
+    for (let i = 0; i < collection.length; i++) {
+      collection[i].childNodes[0].classList.remove("selected");
+      collection[i].childNodes[1].classList.remove("open");
+    }
+
+    let content = event.currentTarget.children;
+    content[0].classList.add("selected");
+    content[1].classList.add("open");
+  }
+
   return ( 
     <header>
       <div className="navbar">
         <div className="navcontent" >
           <img src="./images/blogr/logo.svg" alt="" />
-          <div className="dropdown" >
+          <div className="dropdown" onClick={dropdownhandler} >
             <div className="dropdowntext"  >
               <div>
                 Product
@@ -21,7 +35,7 @@ const Header = () => {
               <Link href="/" >Integrations</Link>
             </nav>
           </div>
-          <div className="dropdown" >
+          <div className="dropdown" onClick={dropdownhandler} >
             <div className="dropdowntext"  >
               <div>
                 Compagny
@@ -35,7 +49,7 @@ const Header = () => {
               <Link href="/" >Career</Link>
             </nav>
           </div>
-          <div className="dropdown" >
+          <div className="dropdown" onClick={dropdownhandler} >
             <div className="dropdowntext"  >
               <div>
                 Connect
