@@ -36,11 +36,17 @@ header{
         .dropdowntext{
           display: flex;
           align-items: center;
+          transition: color 0.25s ease-in-out;
+          
+          &:hover{
+            color: $GrayishBlue;
+          }
 
           img{
             width: 10px;
             height: 10px;
-            margin-left: 10px
+            margin-left: 10px;
+            transition: all 0.25s ease-in-out;
           }
 
           &.selected{
@@ -63,7 +69,9 @@ header{
           border-radius: 5px;
           padding: 20px 0;
           box-shadow: 0px 5px 20px #0000007a;
-          display: none;
+          visibility: hidden;
+          opacity: 0;
+          transition: visibility 0.5s ease-in-out,opacity 0.5s ease-in-out;
 
           &.product{
             width: 160px;
@@ -78,14 +86,14 @@ header{
           }
 
           &.open{
-            display: flex;
+            visibility: visible;
+            opacity: 1;
           }
 
           a{
             color: $VeryDarkGrayishCyan;
             padding: 10px 27px;
             font-weight: 300;
-            margin-right: 40px;
 
             &:hover{
               font-weight: 600;
@@ -102,6 +110,13 @@ header{
 
       @media (max-width:$Tablet){
         display: none;
+      }
+
+      .loginbtn{
+        transition: color 0.25s ease-in-out;
+        &:hover{
+          color: $GrayishBlue;
+        }
       }
       
       .signupbtn{

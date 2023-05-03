@@ -71,7 +71,7 @@ const Header = () => {
           </div>
         </div>
         <nav className="login" >
-          <Link href="/" >Login</Link>
+          <Link href="/" className="loginbtn">Login</Link>
           <Link href="/" className="signupbtn" >Sign up</Link>
         </nav>
         <button className="modalbtn" >
