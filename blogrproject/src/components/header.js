@@ -25,8 +25,8 @@ const Header = () => {
   return ( 
     <header>
       <div className="navbar">
+        <img src="./images/blogr/logo.svg" alt="blogr logo" />
         <div className="navcontent" >
-          <img src="./images/blogr/logo.svg" alt="" />
           <div className="dropdown" >
             <div className="dropdowntext" onClick={dropdownhandler}  >
               <div>
@@ -69,11 +69,11 @@ const Header = () => {
               <Link href="/" >Linkedin</Link>
             </nav>
           </div>
+          <nav className="login" >
+            <Link href="/" className="loginbtn">Login</Link>
+            <Link href="/" className="signupbtn" >Sign up</Link>
+          </nav>
         </div>
-        <nav className="login" >
-          <Link href="/" className="loginbtn">Login</Link>
-          <Link href="/" className="signupbtn" >Sign up</Link>
-        </nav>
         <button className="modalbtn" >
           <span></span>
           <span></span>

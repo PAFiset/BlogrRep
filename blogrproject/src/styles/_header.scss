@@ -7,17 +7,29 @@ header{
   font-weight: 600;
 
   @media(max-width:760px){
-    padding: 35px 35px;
+    padding: 35px 
+  }
+
+  @media(max-width:$Mobile){
+    padding: 35px 15px 
   }
 
   .navbar{
     display: flex;
 
+    & > img{
+      padding-right: 50px;
+      @media (max-width:$Tablet){
+        padding-right: 0;
+      }
+    }
+
     .navcontent{
       display: flex;
+      width: 100%;
 
-      & > img{
-        padding-right: 50px;
+      @media (max-width:$Tablet){
+        width: 0;
       }
 
       .dropdown{
@@ -101,40 +113,42 @@ header{
           }
         }
       }
-    }
 
-    .login{
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-
-      @media (max-width:$Tablet){
-        display: none;
-      }
-
-      .loginbtn{
-        transition: color 0.25s ease-in-out;
-        &:hover{
-          color: $GrayishBlue;
+      .login{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+  
+        @media (max-width:$Tablet){
+          display: none;
+        }
+  
+        .loginbtn{
+          transition: color 0.25s ease-in-out;
+          &:hover{
+            color: $GrayishBlue;
+          }
+        }
+        
+        .signupbtn{
+          color: $Lightred;
+          padding: 10px 30px;
+          border: 1px $LightGrayishCyan solid;
+          border-radius: 20px;
+          background-color: $White;
+          margin-left: 30px;
+          transition: background-color 0.5s ease-in-out,color 0.5s ease-in-out;
+  
+          &:hover{
+            background-color: $VeryLightRed;
+            color: $White;
+          }
         }
       }
-      
-      .signupbtn{
-        color: $Lightred;
-        padding: 10px 30px;
-        border: 1px $LightGrayishCyan solid;
-        border-radius: 20px;
-        background-color: $White;
-        margin-left: 30px;
-        transition: background-color 0.5s ease-in-out,color 0.5s ease-in-out;
-
-        &:hover{
-          background-color: $VeryLightRed;
-          color: $White;
-        }
-      }
+  
     }
 
+    
     .modalbtn{
       width: 60px;
       height: 42px;

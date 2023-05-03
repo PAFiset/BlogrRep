@@ -4,6 +4,7 @@ const Footer = () => {
   return ( 
     <footer>
       <nav>
+        
         <Link href="/" ><img src="./images/blogr/logo.svg" alt="blogr logo" /></Link>
         <div>
           <h3>Product</h3>
