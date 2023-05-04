@@ -23,15 +23,8 @@ const Header = () => {
   }
 
   const modalhandler = (event) => {
-
-
     event.currentTarget.classList.toggle("modalopen");
-
-    console.log(
-    document.querySelector(".navcontent"));
-
     document.querySelector(".navcontent").classList.toggle("modalopen");
-
   }
 
   return ( 
