@@ -5,6 +5,7 @@ header{
   width: 100%;
   padding: 50px 116px;
   font-weight: 600;
+  display: flex;
 
   @media(max-width:760px){
     padding: 35px 
@@ -16,6 +17,7 @@ header{
 
   .navbar{
     display: flex;
+    width: 100%;
 
     & > img{
       padding-right: 50px;
@@ -30,6 +32,24 @@ header{
 
       @media (max-width:$Tablet){
         width: 0;
+        display: none;
+
+        &.modalopen{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          //background-color: $White;
+          background-color: red;
+          width: 90%;
+          top: 130px;
+          left: 0;
+          border-radius: 10px;
+          align-items: center;
+          left: 50%;
+          transform: translate(-50%);
+          padding: 15px;
+          color: $VeryDarkGrayishCyan;
+        }
       }
 
       .dropdown{
@@ -41,8 +61,10 @@ header{
         overflow: visible;
         position: relative;
 
-        @media (max-width:$Tablet){
-          display: none;
+
+        @media(max-width:$Tablet){
+          padding: 10px;
+          align-items: center;
         }
 
         .dropdowntext{
@@ -85,6 +107,12 @@ header{
           opacity: 0;
           transition: visibility 0.5s ease-in-out,opacity 0.5s ease-in-out;
 
+          @media(max-width:$Tablet){
+            position: static;
+            padding: 0;
+            //width: 100%;
+          }
+
           &.product{
             width: 160px;
           }
@@ -100,12 +128,27 @@ header{
           &.open{
             visibility: visible;
             opacity: 1;
+
+            @media(max-width:$Tablet){
+              position: static;
+              padding: 20px 0px;
+              margin: 10px 0;
+
+              a{
+                display: inline;
+              }
+
+            }
           }
 
           a{
             color: $VeryDarkGrayishCyan;
             padding: 10px 27px;
             font-weight: 300;
+
+            @media(max-width:$Tablet){
+              display: none;
+            }
 
             &:hover{
               font-weight: 600;
@@ -118,15 +161,23 @@ header{
         display: flex;
         align-items: center;
         margin-left: auto;
-  
-        @media (max-width:$Tablet){
-          display: none;
+
+        @media(max-width: $Tablet){
+          flex-direction: column;
+          margin: 0;
+          width: 100%;
+          border-top: $GrayishBlue solid 1px;
         }
   
         .loginbtn{
           transition: color 0.25s ease-in-out;
           &:hover{
             color: $GrayishBlue;
+          }
+
+          @media(max-width: $Tablet){
+            padding: 25px 20px 10px;
+            color: $VeryDarkGrayishCyan;
           }
         }
         
@@ -137,73 +188,93 @@ header{
           border-radius: 20px;
           background-color: $White;
           margin-left: 30px;
+          background-image: none;
           transition: background-color 0.5s ease-in-out,color 0.5s ease-in-out;
+
+          @media(max-width:$Tablet){
+            margin: 10px 0 20px;
+            background-image: linear-gradient(to right,$VeryLightRed,$LightRed);
+            background-color:none;
+            border: none;
+            color: $White;
+          }
   
           &:hover{
             background-color: $VeryLightRed;
             color: $White;
+
+            @media(max-width:$Tablet){
+              background-image:none;
+              background-color: $White;
+              color: $VeryLightRed;
+            }
           }
         }
       }
-  
+    }
+  }
+
+  .modalbtn{
+    width: 60px;
+    height: 42px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-left: auto;
+    display: none;
+
+    &:hover{
+      cursor: pointer;
     }
 
-    
-    .modalbtn{
-      width: 60px;
-      height: 42px;
-      background-color: transparent;
-      border: none;
-      position: relative;
-      margin-left: auto;
-      display: none;
+    @media(max-width:$Tablet){
+      display: inline;
+    }
 
-      @media (max-width:$Tablet) {
-        display: inline;
-      }
-
-      span{
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        max-width: 45px;
-        background: $White;
-        border-radius: 9px;
-        opacity: 1;
-        left: 5px;
-        transform: rotate(0deg);
-        transition: .25s ease-in-out;
-
-        &:nth-child(1) {
-          top: 5px;
-        }
-          
-        &:nth-child(2) {
-          top: 17px;
-        }
-          
-        &:nth-child(3) {
-          top: 29px;
-        }
-
-      }
-
+    span{
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      max-width: 45px;
+      background: $White;
+      border-radius: 9px;
+      opacity: 1;
+      left: 5px;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
       &:hover{
-        span:nth-child(1) {
-          top: 16px;
-          transform: rotate(135deg);
-        }
-          
-        span:nth-child(2) {
-          opacity: 0;
-          left: -60px;
-        }
-          
-        span:nth-child(3) {
-          top: 16px;
-          transform: rotate(-135deg);
-        }
+        cursor: pointer;
+      }
+
+      &:nth-child(1) {
+        top: 5px;
+      }
+        
+      &:nth-child(2) {
+        top: 17px;
+      }
+        
+      &:nth-child(3) {
+        top: 29px;
+      }
+
+    }
+
+    &.modalopen{
+      span:nth-child(1) {
+        top: 16px;
+        transform: rotate(135deg);
+      }
+        
+      span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+        
+      span:nth-child(3) {
+        top: 16px;
+        transform: rotate(-135deg);
       }
     }
   }

@@ -22,6 +22,18 @@ const Header = () => {
     }
   }
 
+  const modalhandler = (event) => {
+
+
+    event.currentTarget.classList.toggle("modalopen");
+
+    console.log(
+    document.querySelector(".navcontent"));
+
+    document.querySelector(".navcontent").classList.toggle("modalopen");
+
+  }
+
   return ( 
     <header>
       <div className="navbar">
@@ -74,12 +86,12 @@ const Header = () => {
             <Link href="/" className="signupbtn" >Sign up</Link>
           </nav>
         </div>
-        <button className="modalbtn" >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
+      <button className="modalbtn" onClick={modalhandler} >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header> 
   );
 }
